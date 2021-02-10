@@ -1,8 +1,9 @@
 #!/bin/bash
 read -p"Enter project name:" appName
-mkdir /home/abdo/projects/$appName
-cd $appName
-touch index.html app.js
+read -p"Enter project Directory:" directory
+mkdir  $directory/$appName
+cd $directory/$appName
+touch index.html app.js style.css
 echo "
 <!DOCTYPE html>
 <html lang=\"en\">
@@ -10,6 +11,8 @@ echo "
     <meta charset=\"UTF-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel=\"stylesheet\" href=\"style.css\">
     <title>Document</title>
 </head>
 <body>
